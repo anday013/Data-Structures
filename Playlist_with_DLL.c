@@ -63,11 +63,11 @@ int main()
     Playlist_append(&playlist, track2);
     Playlist_append(&playlist, track3);
     Playlist_append(&playlist, track4);
-    printf("\nInitial version: \n");
+    // printf("\nInitial version: \n");
     Playlist_play(playlist);
-    Playlist_changeorder(&playlist, track2->title, 1);
-    printf("\nAfter changeOrder: \n");
-    Playlist_play(playlist);
+    // Playlist_changeorder(&playlist, track2->title, 1);
+    // printf("\nAfter changeOrder: \n");
+    // Playlist_play(playlist);
     // Playlist_append(&playlist2, track4);
     // printf("***************************************\n");
     // Playlist_play(playlist);
@@ -260,7 +260,7 @@ void Playlist_move2(Playlist **playlist1, Playlist **playlist2, char *title)
     Playlist_remove(playlist1, title);
     printf("Track '%s' from playlist '%s' has been  successfully moved to playlist '%s'\n", title, (*playlist1)->title, (*playlist2)->title);
 }
-
+//Change_order doesn't working
 void Playlist_changeorder(Playlist **playlist, char *TTitle, int order)
 {
     int counter = 0;
